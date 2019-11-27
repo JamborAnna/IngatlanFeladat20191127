@@ -24,17 +24,18 @@ public class CsaladiApartman extends Lakas{
         int felnottekSzama=lakok-gyerekekSzama;
         double felnottTerulet=10;
         double gyerekTerulet=5;
-        if (felnottekSzama + gyerekekSzama / 2 >= 2) {
-            return false;
+        boolean bekoltozhetE=false;
+        for (int i = 0; i < ember; i++) {
+            if (felnottekSzama + gyerekekSzama / 2 >= 2 && (felnottekSzama * felnottTerulet) + (gyerekekSzama * gyerekTerulet) < terulet) {
+                bekoltozhetE=false;
+            }
+            else
+            {
+                lakok++;
+                bekoltozhetE=true;
+            }
         }
-        else if ((felnottekSzama * felnottTerulet) + (gyerekekSzama * gyerekTerulet) < terulet) {
-            return false;
-        }
-        else
-        {
-            lakok++;
-            return true;
-        }
+        return bekoltozhetE;     
     }
 
     @Override
