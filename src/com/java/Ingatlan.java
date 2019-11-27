@@ -1,5 +1,6 @@
 package com.java;
 
-public interface Ingatlan {
-     public void osszkoltseg();
+public interface Ingatlan
+{
+    public double osszkoltseg();
 }
