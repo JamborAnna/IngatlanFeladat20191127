@@ -1,6 +1,6 @@
 package com.java;
 
-public interface Berelheto 
+public interface Berelheto
 {
     public double mennyibeKerul(int honapokSzama);
     public boolean lefoglaltE();
