@@ -7,7 +7,7 @@ public class CsaladiApartman extends Lakas{
         super(terulet, szobakSzama, 0, nmAr);
         this.gyerekekSzama = 0;
     }
-    
+
     public boolean gyerekSzuletik()
     {
         boolean megszuletettE=false;
@@ -24,16 +24,16 @@ public class CsaladiApartman extends Lakas{
         int felnottekSzama=lakok-gyerekekSzama;
         double felnottTerulet=10;
         double gyerekTerulet=5;
-        if (felnottekSzama+gyerekekSzama/2>2) {
+        if (felnottekSzama + gyerekekSzama / 2 >= 2) {
             return false;
         }
-        else if ((felnottekSzama*felnottTerulet)+(gyerekekSzama*gyerekTerulet)<terulet) {
+        else if ((felnottekSzama * felnottTerulet) + (gyerekekSzama * gyerekTerulet) < terulet) {
             return false;
         }
         else
         {
             lakok++;
-            return true;           
+            return true;
         }
     }
 
@@ -41,11 +41,4 @@ public class CsaladiApartman extends Lakas{
     public String toString() {
         return super.toString()+", gyerekek száma=" + gyerekekSzama;
     }
-
-
-    
-    
-    
-   
-    
 }
